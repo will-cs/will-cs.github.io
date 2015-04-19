@@ -1,4 +1,4 @@
-Will-cs.github.io
+Willb611.github.io
 =================
 
 Personal website/blog/jekyll test

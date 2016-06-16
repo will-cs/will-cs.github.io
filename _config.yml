@@ -4,11 +4,9 @@ markdown: kramdown
 
 # Site settings
 title: William Brown
-#email: william.brown-4@student.manchester.ac.uk
 description: > # this means to ignore newlines until "baseurl:"
   Welcome to my personal website/blog! This is just a test of jekyll
   for now, though I will expand it to cover cool coding things!
-#baseurl: "" # the subpath of your site, e.g. /blog/
 
 author:
   name:       'William A O Brown'

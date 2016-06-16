@@ -1,13 +1,30 @@
+# Build settings
+markdown: kramdown
+
+
 # Site settings
-title: Home
-email: william.brown-4@student.manchester.ac.uk
+title: William Brown
+#email: william.brown-4@student.manchester.ac.uk
 description: > # this means to ignore newlines until "baseurl:"
   Welcome to my personal website/blog! This is just a test of jekyll
   for now, though I will expand it to cover cool coding things!
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: will61153
-github_username:  Will-cs
+#baseurl: "" # the subpath of your site, e.g. /blog/
 
-# Build settings
-markdown: kramdown
+author:
+  name:       'William A O Brown'
+  url:         "https://willb611.github.io/"
+
+
+paginate: 1
+github_username:  Willb611
+
+
+# Pages to include in the header of the website.
+pages_list:
+  About: '/about/'
+  Archive: '/archive/'
+  Feed: '/atom.xml'
+
+sass:
+  sass_dir: _scss
+  style: :compressed

@@ -26,3 +26,6 @@ pages_list:
 sass:
   sass_dir: _scss
   style: :compressed
+
+# Gems
+gems: [jekyll-paginate]

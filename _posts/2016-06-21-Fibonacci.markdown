@@ -53,22 +53,22 @@ I may come back and edit this with an actual explanation on how this works. For 
     final int[][] T = new int[2][2];
     T[0] = new int[]{1, 1};
     T[1] = new int[]{1, 0};
-    return raiseMatrixToThePower(T, n - 1)[0][0];
+    return raise(T, n - 1)[0][0];
   }
 
-  private static int[][] raiseMatrixToThePower(int[][] matrix, int power) {
+  private static int[][] raise(int[][] matrix, int power) {
     if (power == 1) {
       return matrix;
     } else if (power % 2 == 1) {
-      return matrixMul(matrix, raiseMatrixToThePower(matrix, power - 1));
+      return matrixMul(matrix, raise(matrix, power - 1));
     } else {
-      int[][] matrixRaisedToHalfPow = raiseMatrixToThePower(matrix, power / 2);
-      return matrixMul(matrixRaisedToHalfPow, matrixRaisedToHalfPow);
+      int[][] halfRaised = raise(matrix, power / 2);
+      return matrixMul(halfRaised, halfRaised);
     }
   }
 
   private static int[][] matrixMul(int[][] A, int[][] B) {
-    int[][] resultingMatrix = new int[2][2];
+    int[][] result = new int[2][2];
     for (int row = 0; row < A.length; row++) {
       for (int col = 0; col < A[0].length; col++) {
         // calculate this thing.
@@ -76,10 +76,10 @@ I may come back and edit this with an actual explanation on how this works. For 
         for (int i = 0; i < 2; i++) {
           res += A[row][i] * B[i][col];
         }
-        resultingMatrix[row][col] = res;
+        result[row][col] = res;
       }
     }
-    return resultingMatrix;
+    return result;
   }
 {% endhighlight %}
 

@@ -1,8 +1,6 @@
-# Build settings
 markdown: kramdown
 
 
-# Site settings
 title: William Brown
 description: > # this means to ignore newlines until the next section
   Welcome to my personal website/blog! This is just a test of jekyll

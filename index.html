@@ -6,7 +6,7 @@ layout: default
   {% for post in paginator.posts %}
   <article class="post">
     <h1 class="post-title">
-      <a href="{{ site.baseurl }}{{ post.url }}">
+      <a href="{{ site.url }}{{ post.url }}">
         {{ post.title }}
       </a>
     </h1>
@@ -20,15 +20,15 @@ layout: default
 
 <div class="pagination">
   {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older</a>
+    <a class="pagination-item older" href="{{ paginator.next_page_path | prepend: site.url }}">Older</a>
   {% else %}
     <span class="pagination-item older">Older</span>
   {% endif %}
   {% if paginator.previous_page %}
-    <a class="pagination-item newer" href="{{ paginator.previous_page_path | prepend: site.baseurl }}">Newer</a>
+    <a class="pagination-item newer" href="{{ paginator.previous_page_path | prepend: site.url }}">Newer</a>
   {% else %}
     <span class="pagination-item newer">Newer</span>
   {% endif %}
 </div>
-  <p class="rss-subscribe">subscribe <a href="{{ "/atom.xml" | prepend: site.baseurl }}">via RSS</a></p>
+  <p class="rss-subscribe">subscribe <a href="{{ "/atom.xml" | prepend: site.url }}">via RSS</a></p>
 

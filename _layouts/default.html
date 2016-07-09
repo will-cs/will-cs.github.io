@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
-
-
   {% include head.html %}
   {% include google_analytics.html %}
-
   <body>
     <div class="container content">
       <header class="masthead">
@@ -13,22 +10,19 @@
           <small>{{ site.tagline }}</small>
         </h3>
       </header>
-
-    <!--{% include header.html %}-->
-
-
+      {% comment %}<!--{% include header.html %}-->{% endcomment %}
       <main>
         {{ content }}
       </main>
     </div>
 
+    {% comment %}
     {% include comments.html %}
+    <script id="dsq-count-scr" src="https://githubcomwillb611.disqus.com/count.js" async></script> {% endcomment %}
     <footer class="footer">
       <small>
         &copy; <time datetime="{{ site.time | date: '%Y' }}">{{ site.time | date: '%Y' }}</time>. All rights reserved.
       </small>
     </footer>
-
   </body>
-
 </html>

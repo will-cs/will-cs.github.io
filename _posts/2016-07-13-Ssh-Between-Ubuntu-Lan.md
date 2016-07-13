@@ -5,18 +5,21 @@ date:   2016-07-13
 categories: ubuntu network
 ---
 
-Ssh access across Ubuntu computers on a local network.
-======================================================
+## Ssh access across Ubuntu computers on a local network.
+
 This a post about how to get ssh working between to Ubuntu computers on a local network. First check if the computer is actually reachable on the network, if it is then several steps are listed to ensure ssh should work. It was tested with one computer running Ubuntu 14.04LTS, and another running 16.04LTS.
 
-First to test if the computer is discoverable.
-==============================================
+### First to test if the computer is discoverable.
+
 From one of the ubuntu computers run the following to discover local computers on the network:
 {% highlight bash %}
 avahi-browse -tl _workstation._tcp
 {% endhighlight %}
 If it comes up empty, it means the other Ubuntu computers cannot be seen. So either you're missing an ethernet cable, or perhaps the router/switch you are using is misconfigured.
 If it comes up with a computer name, ie "Terrier.home" then that means you've found a Ubuntu computer called "Terrier". Assuming that is the computer you are trying to connect to then that's good. You can try ssh'ing to it now `ssh user@Terrier.home` where Terrier is your login on the computer Terrier. If it works, then the rest of this post can be ignored :D. Otherwise on with steps of trying to fix it.
+
+
+
 
 Next to check the correct packages are installed. The package "open-ssh-client" should be installed on the computer you are trying to ssh from. You also need the "openssh-server" package installed on the server you are cloning from. These packages can be installed via apt: `sudo apt-get install <PACKAGE-NAME>`
 Now after installing openssh-server, ensure it's running by running the following:
@@ -47,4 +50,4 @@ This command was a convenience command, it looks for public ssh keys you have in
 
 Now if you try to test the ssh connection again, the ssh keys you just installed on the server should mean there is no password prompt :).
 
-That was a blog post on how to SSH between two Ubuntu computers on a LAN, detailing some issues I came across which could happen to you! If you found it helpful please do let me know!
+That was a blog post on how to SSH between two Ubuntu computers on a LAN, detailing some issues I came across which could happen to you! If you found it helpful please do [ let me know!](mailto:{{ site.author.email }}?Subject=Good%20post%20on%20ssh%20between%20Ubuntu%20computers%20in%20lan)

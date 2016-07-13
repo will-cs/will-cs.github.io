@@ -9,6 +9,7 @@ description: > # this means to ignore newlines until the next section
 author:
   name:       'William A O Brown'
   url:         "https://willb611.github.io/"
+  email:      "will.b611@gmail.com"
 
 
 paginate: 1

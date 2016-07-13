@@ -1,9 +1,9 @@
--_site
--.sass-cache
--Gemfile
--Gemfile.lock
+_site
+.sass-cache
+Gemfile
+Gemfile.lock
 .idea
-
+*.iml
 
 # OS generated files #
 ######################
